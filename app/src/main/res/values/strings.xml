@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HelloKotlinPlus</string>
+    <string name="tagline">Built with Kotlin &amp; Jetpack Compose</string>
+    <string name="greeting_title">Hello, World!</string>
+    <string name="name_input_label">What is your name?</string>
+    <string name="name_input_placeholder">e.g. Alex, Ada, World</string>
+    <string name="say_hello_button">Send a Wave 👋</string>
+    <string name="waves_count_label">Waves sent</string>
+    <string name="languages_title">Say Hello across the World</string>
+    <string name="quick_facts_title">App Details</string>
+    <string name="fact_ui_framework">Jetpack Compose &amp; Material 3</string>
+    <string name="fact_language">Kotlin 2.0</string>
+    <string name="fact_architecture">Edge-to-Edge &amp; M3 Theming</string>
+    <string name="reset_button">Reset</string>
+</resources>
