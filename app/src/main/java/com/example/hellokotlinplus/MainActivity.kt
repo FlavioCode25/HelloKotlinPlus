@@ -67,6 +67,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -127,8 +128,8 @@ val SupportedLanguages = listOf(
 @Composable
 fun HelloWorldApp() {
     var userName by rememberSaveable { mutableStateOf("") }
-    var selectedLanguageIndex by rememberSaveable { mutableStateOf(0) }
-    var waveCount by rememberSaveable { mutableStateOf(0) }
+    var selectedLanguageIndex by rememberSaveable { mutableIntStateOf(0) }
+    var waveCount by rememberSaveable { mutableIntStateOf(0) }
     var isWavingAnimationTriggered by remember { mutableStateOf(false) }
 
     val selectedLanguage = SupportedLanguages.getOrElse(selectedLanguageIndex) { SupportedLanguages[0] }
@@ -198,8 +199,12 @@ fun HelloWorldApp() {
                         )
                     }
                 },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    scrolledContainerColor = Color.Unspecified,
+                    navigationIconContentColor = Color.Unspecified,
+                    titleContentColor = Color.Unspecified,
+                    actionIconContentColor = Color.Unspecified
                 )
             )
         },
